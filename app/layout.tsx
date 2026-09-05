@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     description:
       "India's First Screen-Ready & Cinema Transformation Ecosystem",
     type: "website",
-    images: [{ url: "/images/hero-bg.jpg", width: 1800, height: 1100 }],
+    images: [{ url: "/images/hero-bg.jpg", width: 1800, height: 771 }],
   },
 };
 

@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import ScrollProgress from "@/components/ScrollProgress";
 import Ticker from "@/components/Ticker";
 import FilmStrip from "@/components/FilmStrip";
 import Hero from "@/components/Hero";
@@ -24,9 +23,12 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* ACT I */}
+        {/* OPENING + ENTRY */}
         <Hero />
+        <Challenges />
         <Ticker />
+
+        {/* ACT I */}
         <Vision />
         <Pillars />
 
@@ -45,7 +47,6 @@ export default function Home() {
         {/* ACT III */}
         <Awards />
         <Finale />
-        <Challenges />
         <Governance />
         <EcosystemStrip />
         <FinalCta />

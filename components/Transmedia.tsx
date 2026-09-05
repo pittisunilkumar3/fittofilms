@@ -37,7 +37,7 @@ export default function Transmedia() {
         <div className="transmedia-still reveal" data-reveal>
           <Image
             src="/images/transmedia.jpg"
-            alt="Cinema camera on set — your story, produced"
+            alt="Creator collaborating with a team across film, motion capture, and music production"
             fill
             sizes="(max-width: 1100px) 100vw, 1100px"
           />

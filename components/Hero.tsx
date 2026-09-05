@@ -63,14 +63,18 @@ export default function Hero() {
             Join the Challenge
           </a>
           <a href="#vision" className="btn btn-ghost">
-            Watch the Trailer
+            Explore the Vision
           </a>
         </div>
 
         <div className="hero-durations">
           <span className="lbl">Choose Your Arc</span>
-          <span className="dur-pill">60 DAYS</span>
-          <span className="dur-pill">45 DAYS</span>
+          <a href="#challenges" className="dur-pill">
+            60 DAYS
+          </a>
+          <a href="#challenges" className="dur-pill">
+            45 DAYS
+          </a>
         </div>
 
         <div className="hero-stats">

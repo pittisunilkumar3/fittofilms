@@ -3174,3 +3174,145 @@ html { scrollbar-width: thin; scrollbar-color: var(--orange-d) var(--ink-0); }
 .finale::before { z-index: 1; }  /* atmosphere over photo */
 .finale::after  { z-index: 1; }  /* spotlight rays */
 .finale-crowd { z-index: 2; }
+
+/* ═══════════════════════════════════════════════════════════
+   CAMPAIGN REFRESH · Content-led photography + early pricing
+═══════════════════════════════════════════════════════════ */
+
+.hero-bg-img {
+  object-position: center center;
+  opacity: 0.52;
+  filter: saturate(0.95) contrast(1.05);
+}
+
+.pricing-section {
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(4.5rem, 8vw, 7rem) 0 clamp(5rem, 9vw, 8rem);
+  border-top: 1px solid rgba(212,160,59,0.45);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(184,35,43,0.08), transparent 28rem),
+    radial-gradient(circle at 92% 18%, rgba(212,160,59,0.13), transparent 30rem),
+    var(--paper);
+}
+.pricing-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.28;
+  background-image: linear-gradient(rgba(10,14,26,0.045) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(10,14,26,0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(180deg, #000, transparent 72%);
+}
+.pricing-section .challenges-head {
+  max-width: 880px;
+  margin: 0 auto 2.5rem;
+}
+.pricing-section .challenges-head h2 {
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  margin-top: 1.35rem;
+}
+.pricing-section .challenges-head p {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+}
+.pricing-section .chal-converge {
+  margin: -1rem auto 2.8rem;
+  color: var(--ink-1);
+}
+
+.chal-value-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1100px;
+  margin: 0 auto 3.2rem;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(10,14,26,0.09);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(10,14,26,0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.chal-value-strip > div {
+  min-width: 0;
+  padding: 1.35rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: left;
+  border-right: 1px solid rgba(10,14,26,0.08);
+}
+.chal-value-strip > div:last-child { border-right: 0; }
+.chal-value-strip strong {
+  flex-shrink: 0;
+  font-family: var(--f-display);
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--crimson);
+}
+.chal-value-strip span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--grey-3);
+}
+
+.pricing-section .chal-grid.two {
+  max-width: 1100px;
+  gap: clamp(1.25rem, 3vw, 2.2rem);
+}
+.pricing-section .chal {
+  border-radius: 26px;
+  box-shadow: 0 18px 48px rgba(10,14,26,0.12);
+}
+.pricing-section .chal:not(.featured) {
+  background: rgba(255,255,255,0.92);
+}
+.pricing-section .chal-img {
+  height: 220px;
+  border: 1px solid rgba(212,160,59,0.18);
+}
+.pricing-section .chal-img img {
+  filter: saturate(0.96) contrast(1.04);
+}
+.pricing-section .chal .btn {
+  min-height: 54px;
+}
+
+.arch-img {
+  opacity: 0.62;
+  filter: saturate(0.9) contrast(1.08) brightness(0.92);
+}
+.arch-scrim {
+  background: linear-gradient(180deg, rgba(10,14,26,0.2) 0%, rgba(10,14,26,0.42) 42%, rgba(10,14,26,0.95) 90%);
+}
+.finale-bg-img {
+  opacity: 0.4;
+  filter: saturate(0.95) contrast(1.05);
+}
+
+@media (max-width: 800px) {
+  .chal-value-strip { grid-template-columns: repeat(2, 1fr); }
+  .pricing-section .chal-grid.two { grid-template-columns: 1fr; }
+  .chal-value-strip > div:nth-child(2) { border-right: 0; }
+  .chal-value-strip > div:nth-child(-n+2) { border-bottom: 1px solid rgba(10,14,26,0.08); }
+}
+
+@media (max-width: 700px) {
+  .hero-bg-img { object-position: 58% center; }
+  .pricing-section .chal-img { height: 190px; }
+}
+
+@media (max-width: 480px) {
+  .chal-value-strip > div {
+    padding: 1rem 0.75rem;
+    justify-content: flex-start;
+  }
+  .chal-value-strip strong { font-size: 1.45rem; }
+  .chal-value-strip span { font-size: 0.6rem; letter-spacing: 0.1em; }
+}

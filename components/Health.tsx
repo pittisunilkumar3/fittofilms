@@ -23,7 +23,7 @@ export default function Health() {
             <div className="health-img">
               <Image
                 src="/images/health.jpg"
-                alt="Athlete training under a certified coach"
+                alt="Participant completing a supervised health baseline assessment"
                 fill
                 sizes="(max-width: 900px) 100vw, 40vw"
               />

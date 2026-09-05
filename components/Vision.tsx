@@ -79,7 +79,7 @@ export default function Vision() {
         <div className="vision-still reveal" data-reveal>
           <Image
             src="/images/vision-still.jpg"
-            alt="Runner in motion at dawn — every day is a new scene"
+            alt="Aspiring actor preparing with confidence before a studio shoot"
             fill
             sizes="(max-width: 1100px) 100vw, 1100px"
             className="vision-still-img"

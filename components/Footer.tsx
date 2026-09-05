@@ -14,7 +14,7 @@ const COLUMNS = [
       { label: "Passport", href: "#passport" },
       { label: "Awards", href: "#awards" },
       { label: "The Vision", href: "#vision" },
-      { label: "Seven Pillars", href: "#pillars" },
+      { label: "Six Categories", href: "#pillars" },
     ],
   },
   {

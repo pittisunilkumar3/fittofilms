@@ -54,7 +54,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a href="#pillars" className="nav-cta">
+          <a href="#challenges" className="nav-cta">
             Enter Now
           </a>
           <button
@@ -70,7 +70,12 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div id="mobile-menu" className={`nav-menu${open ? " open" : ""}`}>
+      <div
+        id="mobile-menu"
+        className={`nav-menu${open ? " open" : ""}`}
+        aria-hidden={!open}
+        inert={!open}
+      >
         <ul>
           {LINKS.map((l) => (
             <li key={l.href}>
@@ -81,7 +86,7 @@ export default function Navbar() {
           ))}
         </ul>
         <a
-          href="#pillars"
+          href="#challenges"
           className="nav-cta"
           onClick={() => setOpen(false)}
         >
