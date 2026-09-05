@@ -1,9 +1,12 @@
+import Image from "next/image";
+
 const ARCHETYPES = [
   {
     idx: "A · 01",
     tag: "Action",
     name: "The Action Hero",
     quote: '"Built for the fight scene. Trained for the close-up."',
+    img: "/images/arch-action.jpg",
     orange: false,
   },
   {
@@ -11,6 +14,7 @@ const ARCHETYPES = [
     tag: "Drama",
     name: "The OTT Lead",
     quote: '"The face the algorithm is searching for."',
+    img: "/images/arch-ott.jpg",
     orange: true,
   },
   {
@@ -18,6 +22,7 @@ const ARCHETYPES = [
     tag: "Anime",
     name: "The Anime Avatar",
     quote: '"Body of a character. Soul of a fan."',
+    img: "/images/arch-anime.jpg",
     orange: false,
   },
   {
@@ -25,6 +30,7 @@ const ARCHETYPES = [
     tag: "Cosplay",
     name: "The Cosplay Icon",
     quote: '"You are the character. The camera confirms it."',
+    img: "/images/arch-cosplay.jpg",
     orange: false,
   },
   {
@@ -32,6 +38,7 @@ const ARCHETYPES = [
     tag: "Reels",
     name: "The Reels Royalty",
     quote: '"30 seconds. 30 million views. 1 transformation."',
+    img: "/images/arch-reels.jpg",
     orange: false,
   },
   {
@@ -39,6 +46,7 @@ const ARCHETYPES = [
     tag: "Mocap",
     name: "The Mocap Performer",
     quote: '"Your body becomes the data."',
+    img: "/images/arch-mocap.jpg",
     orange: true,
   },
   {
@@ -46,6 +54,7 @@ const ARCHETYPES = [
     tag: "Dance",
     name: "The Dance Lead",
     quote: '"Every frame is a hook step."',
+    img: "/images/arch-dance.jpg",
     orange: false,
   },
   {
@@ -53,6 +62,7 @@ const ARCHETYPES = [
     tag: "Music",
     name: "The Music Star",
     quote: '"When the beat drops, the frame follows you."',
+    img: "/images/arch-music.jpg",
     orange: false,
   },
 ];
@@ -78,6 +88,14 @@ export default function Archetypes() {
               key={a.idx}
               data-reveal
             >
+              <Image
+                src={a.img}
+                alt={a.name}
+                fill
+                sizes="(max-width: 500px) 100vw, (max-width: 900px) 50vw, 25vw"
+                className="arch-img"
+              />
+              <span className="arch-scrim" aria-hidden="true" />
               <div className="arch-top">
                 <span className="arch-idx">{a.idx}</span>
                 <span className="arch-tag">{a.tag}</span>

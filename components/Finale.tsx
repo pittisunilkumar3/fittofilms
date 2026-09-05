@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const META = [
   { n: "100,000+", l: "Expected Visitors" },
   { n: "2,500", l: "Graduates on Stage" },
@@ -8,6 +10,13 @@ const META = [
 export default function Finale() {
   return (
     <section className="finale" id="finale">
+      <Image
+        src="/images/finale-bg.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="finale-bg-img"
+      />
       <div className="wrap finale-inner">
         <span className="finale-eyebrow">
           The Grand Finale · Live · On Stage

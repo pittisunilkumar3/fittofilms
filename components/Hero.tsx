@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CountUp from "./CountUp";
 
 const STATS = [
@@ -10,7 +11,16 @@ const STATS = [
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-bg" />
+      <div className="hero-bg">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hero-bg-img"
+        />
+      </div>
       <div className="hero-lines" />
 
       <div className="wrap hero-inner">

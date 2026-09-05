@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Health() {
   return (
     <section className="health">
@@ -17,6 +19,14 @@ export default function Health() {
             <div className="health-note">
               A medical partner reviews every baseline. Any red flag pauses the
               arc until a physician clears it.
+            </div>
+            <div className="health-img">
+              <Image
+                src="/images/health.jpg"
+                alt="Athlete training under a certified coach"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
             </div>
           </div>
 

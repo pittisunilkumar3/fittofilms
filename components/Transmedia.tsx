@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const DELIVERABLES = [
   "Feature Film",
   "Short Reels",
@@ -30,6 +32,16 @@ export default function Transmedia() {
           {DELIVERABLES.map((d) => (
             <span key={d}>{d}</span>
           ))}
+        </div>
+
+        <div className="transmedia-still reveal" data-reveal>
+          <Image
+            src="/images/transmedia.jpg"
+            alt="Cinema camera on set — your story, produced"
+            fill
+            sizes="(max-width: 1100px) 100vw, 1100px"
+          />
+          <span className="ts-tag">Your Story · Produced</span>
         </div>
       </div>
     </section>

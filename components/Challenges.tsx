@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ARCS = [
   {
     days: "60",
@@ -5,6 +7,8 @@ const ARCS = [
     title: "FOUNDATION ARC",
     start: "Starts 1 October 2026",
     featured: true,
+    img: "/images/chal60.jpg",
+    imgAlt: "Athlete performing an overhead barbell press",
     prices: [
       { who: "Single", amt: "2,999" },
       { who: "Couple", amt: "4,499" },
@@ -26,6 +30,8 @@ const ARCS = [
     title: "ELITE INTENSIVE",
     start: "Starts 15 October 2026",
     featured: false,
+    img: "/images/chal45.jpg",
+    imgAlt: "Boxer drilling combinations in an intensive session",
     prices: [
       { who: "Single", amt: "3,999" },
       { who: "Couple", amt: "5,999" },
@@ -67,6 +73,14 @@ export default function Challenges() {
               key={a.days}
               data-reveal
             >
+              <div className="chal-img">
+                <Image
+                  src={a.img}
+                  alt={a.imgAlt}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 470px"
+                />
+              </div>
               <div className="chal-days">
                 {a.days}
                 <span className="unit">{a.unit}</span>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const MANTRAS = [
   {
     num: "01",
@@ -73,6 +75,17 @@ export default function Vision() {
           A transformation is never only physical. You don&apos;t just get fit.
           You become <strong>screen ready.</strong>
         </p>
+
+        <div className="vision-still reveal" data-reveal>
+          <Image
+            src="/images/vision-still.jpg"
+            alt="Runner in motion at dawn — every day is a new scene"
+            fill
+            sizes="(max-width: 1100px) 100vw, 1100px"
+            className="vision-still-img"
+          />
+          <span className="vs-tag">Season 01 · The Journey Begins</span>
+        </div>
       </div>
 
       <div className="mantra-label wrap reveal" data-reveal>
