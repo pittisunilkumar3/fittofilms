@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-share-v2.jpg",
+        url: "/images/og-share-v3.jpg",
         width: 1200,
         height: 630,
         alt: "Fit To Films — Become Screen Ready, in association with Cinematica Expo",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     title: "Fit To Films™ | Become Screen Ready",
     description:
       "India's First Screen-Ready & Cinema Transformation Ecosystem",
-    images: ["/images/og-share-v2.jpg"],
+    images: ["/images/og-share-v3.jpg"],
   },
 };
 

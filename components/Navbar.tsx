@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const LINKS = [
@@ -57,6 +58,38 @@ export default function Navbar() {
           <a href="#challenges" className="nav-cta">
             Enter Now
           </a>
+          <div className="nav-partners" aria-label="Partner organizations">
+            <a
+              href="https://www.cinematicaexpo.com/"
+              className="nav-partner"
+              target="_blank"
+              rel="noreferrer"
+              title="Cinematica Expo"
+            >
+              <Image
+                src="/logos/cinematica-expo.png"
+                alt="Cinematica Expo"
+                width={48}
+                height={48}
+                priority
+              />
+            </a>
+            <a
+              href="https://cinica.org/"
+              className="nav-partner nav-partner-cinica"
+              target="_blank"
+              rel="noreferrer"
+              title="CINICA Creators Council"
+            >
+              <Image
+                src="/logos/cinica.png"
+                alt="CINICA Creators Council"
+                width={48}
+                height={48}
+                priority
+              />
+            </a>
+          </div>
           <button
             type="button"
             className={`nav-toggle${open ? " open" : ""}`}
