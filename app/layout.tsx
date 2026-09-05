@@ -12,6 +12,9 @@ import RevealObserver from "@/components/RevealObserver";
 import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://fittofilms.vercel.app";
+
 const anton = Anton({
   weight: "400",
   subsets: ["latin"],
@@ -59,15 +62,38 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Fit To Films™ | Become Screen Ready",
   description:
     "Fit To Films™: India's First Screen-Ready & Cinema Transformation Ecosystem. Transform Your Body. Build Your Confidence. Become Screen Ready.",
+  applicationName: "Fit To Films™",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: "/icon.svg",
+  },
   openGraph: {
     title: "Fit To Films™ | Become Screen Ready",
     description:
       "India's First Screen-Ready & Cinema Transformation Ecosystem",
+    url: "/",
+    siteName: "Fit To Films™",
+    locale: "en_IN",
     type: "website",
-    images: [{ url: "/images/hero-bg.jpg", width: 1800, height: 771 }],
+    images: [
+      {
+        url: "/images/og-share-v2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fit To Films — Become Screen Ready, in association with Cinematica Expo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fit To Films™ | Become Screen Ready",
+    description:
+      "India's First Screen-Ready & Cinema Transformation Ecosystem",
+    images: ["/images/og-share-v2.jpg"],
   },
 };
 
