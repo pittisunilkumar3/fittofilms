@@ -42,12 +42,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className="nav"
-        style={
-          scrolled ? { background: "rgba(245,241,234,0.97)" } : undefined
-        }
-      >
+      <nav className={`nav${scrolled ? " is-scrolled" : ""}`}>
         <div className="nav-inner">
           <a href="#" className="logo">
             FIT TO FILMS<span className="tm">™</span>

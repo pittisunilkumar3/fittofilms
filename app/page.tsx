@@ -1,4 +1,7 @@
 import Navbar from "@/components/Navbar";
+import ScrollProgress from "@/components/ScrollProgress";
+import Ticker from "@/components/Ticker";
+import FilmStrip from "@/components/FilmStrip";
 import Hero from "@/components/Hero";
 import Vision from "@/components/Vision";
 import Pillars from "@/components/Pillars";
@@ -23,8 +26,11 @@ export default function Home() {
       <main>
         {/* ACT I */}
         <Hero />
+        <Ticker />
         <Vision />
         <Pillars />
+
+        <FilmStrip label="ACT II · THE METHOD" />
 
         {/* ACT II */}
         <Journey />
@@ -33,6 +39,8 @@ export default function Home() {
         <Transmedia />
         <Archetypes />
         <Passport />
+
+        <FilmStrip label="ACT III · RECOGNITION" />
 
         {/* ACT III */}
         <Awards />

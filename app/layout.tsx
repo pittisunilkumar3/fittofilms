@@ -9,6 +9,7 @@ import {
   Cormorant_Garamond,
 } from "next/font/google";
 import RevealObserver from "@/components/RevealObserver";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 const anton = Anton({
@@ -85,6 +86,7 @@ export default function RootLayout({
       className={`${anton.variable} ${bebas.variable} ${oswald.variable} ${inter.variable} ${manrope.variable} ${jakarta.variable} ${cormorant.variable}`}
     >
       <body>
+        <ScrollProgress />
         {children}
         <RevealObserver />
       </body>
