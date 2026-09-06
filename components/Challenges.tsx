@@ -16,7 +16,7 @@ const ARCS = [
       { who: "Couple", amt: "4,499" },
     ],
     features: [
-      "Full health assessment & baseline",
+      "Get your own health assessment & baseline",
       "Get your own coach for the full arc",
       "8 weekly progress submissions",
       "Complete story universe production",
@@ -41,7 +41,7 @@ const ARCS = [
       { who: "Couple", amt: "5,999" },
     ],
     features: [
-      "Full health assessment & baseline",
+      "Get your own health assessment & baseline",
       "Get your own coach for the full arc",
       "6 weekly progress submissions",
       "Complete story universe production",
