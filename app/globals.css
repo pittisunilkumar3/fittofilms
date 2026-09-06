@@ -2755,8 +2755,8 @@ section[id] { scroll-margin-top: 84px; }
     object-fit: contain;
   }
   .nav-partner-cinica img {
-    width: 92%;
-    height: 92%;
+    width: 82%;
+    height: 82%;
     object-fit: contain;
     border-radius: 50%;
   }
@@ -2795,8 +2795,8 @@ section[id] { scroll-margin-top: 84px; }
     height: 30px;
   }
   .nav-partner-cinica img {
-    width: 92%;
-    height: 92%;
+    width: 82%;
+    height: 82%;
     border-radius: 50%;
   }
   .nav-partner-cinica {
@@ -3433,6 +3433,28 @@ html { scrollbar-width: thin; scrollbar-color: var(--orange-d) var(--ink-0); }
 }
 
 @media (max-width: 480px) {
+  .pricing-section .challenges-head .eyebrow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.45rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.18em;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+  .pricing-section .challenges-head .eyebrow::before,
+  .pricing-section .challenges-head .eyebrow::after {
+    content: '';
+    width: 22px;
+    height: 1px;
+    flex: 0 0 22px;
+    align-self: center;
+    background: linear-gradient(90deg, var(--crimson), var(--orange));
+  }
+  .pricing-section .challenges-head .eyebrow::after {
+    background: linear-gradient(90deg, var(--orange), var(--crimson));
+  }
   .chal-value-strip > div {
     padding: 1rem 0.75rem;
     justify-content: flex-start;
