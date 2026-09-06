@@ -8,8 +8,8 @@ const STEPS = [
   {
     num: "02",
     label: "Step Two · Day One",
-    title: "Health Assessment",
-    text: "CBC, BMI, body fat, blood pressure, lipid profile, fasting sugar. Non-negotiable.",
+    title: "Get Your Own Health Assessment",
+    text: "Your own health assessment & baseline: CBC, BMI, body fat, blood pressure, lipid profile, fasting sugar. Non-negotiable.",
   },
   {
     num: "03",
