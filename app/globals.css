@@ -579,6 +579,38 @@ body::before {
   overflow: hidden;
   transition: transform 0.4s;
 }
+.vision-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(7,11,23,0.97) 0%, rgba(7,11,23,0.88) 48%, rgba(7,11,23,0.38) 100%),
+    linear-gradient(0deg, rgba(7,11,23,0.68) 0%, transparent 50%, rgba(7,11,23,0.22) 100%);
+}
+.vision-card.is::after {
+  background:
+    linear-gradient(90deg, rgba(79,8,15,0.96) 0%, rgba(115,14,24,0.84) 48%, rgba(55,6,12,0.30) 100%),
+    linear-gradient(0deg, rgba(55,6,12,0.66) 0%, transparent 50%, rgba(55,6,12,0.20) 100%);
+}
+.vision-card-image {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  transition: transform 0.7s cubic-bezier(0.2,0.8,0.2,1), filter 0.7s ease;
+}
+.vision-card:hover .vision-card-image {
+  transform: scale(1.045);
+  filter: saturate(1.08);
+}
+.vision-card > .prefix,
+.vision-card > .body,
+.vision-card > .footnote {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.48);
+}
 .vision-card:hover { transform: translateY(-8px); }
 .vision-card.not {
   background: linear-gradient(160deg, var(--ink-3), var(--ink-2));
@@ -603,6 +635,7 @@ body::before {
   font-size: clamp(1.6rem, 2.2vw, 2.2rem);
   line-height: 1.05;
   letter-spacing: 0.02em;
+  max-width: 76%;
   margin-bottom: 2rem;
 }
 .vision-card.not .body { color: var(--off-w); }
@@ -3433,6 +3466,17 @@ html { scrollbar-width: thin; scrollbar-color: var(--orange-d) var(--ink-0); }
 }
 
 @media (max-width: 480px) {
+  .mantra-label .eyebrow {
+    gap: 0.45rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+  .mantra-label .eyebrow::before {
+    width: 20px;
+    flex: 0 0 20px;
+  }
   .pricing-section .challenges-head .eyebrow {
     display: flex;
     width: 100%;

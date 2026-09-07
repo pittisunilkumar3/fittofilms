@@ -3,6 +3,9 @@ import Image from "next/image";
 const MANTRAS = [
   {
     num: "01",
+    label: "One",
+    image: "/images/mantra-hero.webp",
+    alt: "An aspiring Indian screen performer stepping toward a film set spotlight",
     body: (
       <>
         I Am the <strong>Hero of My Own Story.</strong>
@@ -12,6 +15,9 @@ const MANTRAS = [
   },
   {
     num: "02",
+    label: "Two",
+    image: "/images/mantra-decision.webp",
+    alt: "An Indian performer leaving a dressing room and stepping onto a bright set",
     body: (
       <>
         One Decision Today. <strong>A Lifetime of Change.</strong>
@@ -21,36 +27,12 @@ const MANTRAS = [
   },
   {
     num: "03",
+    label: "Three",
+    image: "/images/mantra-new-scene.webp",
+    alt: "An Indian performer walking onto a new cinema set at sunrise",
     body: (
       <>
         Every Day is a <strong>New Scene.</strong>
-      </>
-    ),
-    featured: false,
-  },
-  {
-    num: "04",
-    body: (
-      <>
-        Transform Together. <strong>Inspire Millions.</strong>
-      </>
-    ),
-    featured: false,
-  },
-  {
-    num: "05",
-    body: (
-      <>
-        Build a Legacy, <strong>Not Just a Body.</strong>
-      </>
-    ),
-    featured: true,
-  },
-  {
-    num: "06",
-    body: (
-      <>
-        Transform Naturally. <strong>Become Screen Ready.</strong>
       </>
     ),
     featured: false,
@@ -99,22 +81,16 @@ export default function Vision() {
             className={`vision-card ${m.featured ? "is" : "not"} reveal`}
             data-reveal
           >
+            <Image
+              src={m.image}
+              alt={m.alt}
+              fill
+              sizes="(max-width: 720px) 82vw, 460px"
+              className="vision-card-image"
+            />
             <div className="prefix">{m.num}</div>
             <div className="body">{m.body}</div>
-            <div className="footnote">
-              Mantra{" "}
-              {m.num === "01"
-                ? "One"
-                : m.num === "02"
-                  ? "Two"
-                  : m.num === "03"
-                    ? "Three"
-                    : m.num === "04"
-                      ? "Four"
-                      : m.num === "05"
-                        ? "Five"
-                        : "Six"}
-            </div>
+            <div className="footnote">Mantra {m.label}</div>
           </div>
         ))}
       </div>
