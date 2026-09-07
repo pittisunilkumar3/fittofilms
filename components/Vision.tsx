@@ -89,7 +89,7 @@ export default function Vision() {
       </div>
 
       <div className="mantra-label wrap reveal" data-reveal>
-        <span className="eyebrow">The Six Transformation Mantras</span>
+        <span className="eyebrow">The Three Transformation Mantras</span>
       </div>
 
       <div className="vision-scroller">
